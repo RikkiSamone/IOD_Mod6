@@ -1,3 +1,5 @@
+
+//use State is a React hook
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -6,11 +8,12 @@ import PropsDisplayer from './components/PropsDisplayer/PropsDisplayer' // up th
 import City from './components/City/City'
 import Pets from './components/Pets/pets'
 import FullName from './components/Names/Fullname.jsx'
-import ComplexComment from './components/Complex/ComplexComment.jsx'
-import UserInfo from './components/Exercise/UserInfo.jsx'
-import Avatar from './components/Exercise/Avatar.jsx'
-import Comment from './components/Exercise/Comment.jsx'
-import FormattedDate from './components/Exercise/FormattedDate.jsx'
+import MoviesList from './components/Movie List/movielist.jsx'
+import Moviemap from './components/Movie List/moviemap.jsx'
+import MoodChanger from './components/MoodChanger/moodchanger.jsx'
+import BirthdayTranslator from './components/Complex/Birthday/birthdayTranslator.jsx'
+import Weather from './components/Weather/weather.jsx'
+import LoginForm from './components/Form/form.jsx'
 
 function ExampleComponent() {
 return (
@@ -84,13 +87,12 @@ props.children */}
       </Pets>
 
       <FullName first="Kendrick" middle="'the GOAT'" last="Lamar"> </FullName>
-      <ComplexComment author={Comment.author} date={Comment.date} text={Comment.text}></ComplexComment>
-  
-      <Comment
-        author={exampleComment.author}
-        text={exampleComment.text}
-        date={exampleComment.date}
-      />
+
+      <MoviesList></MoviesList>
+      <MoodChanger></MoodChanger>
+      <BirthdayTranslator></BirthdayTranslator>
+      <Weather></Weather>
+      <LoginForm></LoginForm>
     </div>
   );
 }
