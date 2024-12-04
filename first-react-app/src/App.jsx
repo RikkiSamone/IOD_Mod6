@@ -14,6 +14,11 @@ import MoodChanger from './components/MoodChanger/moodchanger.jsx'
 import BirthdayTranslator from './components/Complex/Birthday/birthdayTranslator.jsx'
 import Weather from './components/Weather/weather.jsx'
 import LoginForm from './components/Form/form.jsx'
+import ComplexComment from './components/Exercise/ComplexComment.jsx'
+//import ErrorMessage from './error.jsx'
+//import ExplodingBomb from './components/Error/bomb.jsx'
+import Clock from './components/Clocks/clock.jsx'
+import ClockDisplay from './components/Clocks/clockdisplay.jsx'
 
 function ExampleComponent() {
 return (
@@ -93,6 +98,8 @@ props.children */}
       <BirthdayTranslator></BirthdayTranslator>
       <Weather></Weather>
       <LoginForm></LoginForm>
+  
+      <ClockDisplay></ClockDisplay>
     </div>
   );
 }
