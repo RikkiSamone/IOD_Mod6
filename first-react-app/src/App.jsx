@@ -19,6 +19,12 @@ import ComplexComment from './components/Exercise/ComplexComment.jsx'
 //import ExplodingBomb from './components/Error/bomb.jsx'
 import Clock from './components/Clocks/clock.jsx'
 import ClockDisplay from './components/Clocks/clockdisplay.jsx'
+//import ActivityFinder from './components/useEffect/activityFinder.jsx'
+import BitcoinRates from './components/BitCoinRates/BitCoinRates.jsx'
+import RefCounter  from './components/countREf/countRef.jsx'
+import VideoPlayer from './components/VideoPlayer/videoPlayer.jsx'
+import PostListReducer from './components/useReducer/postList.jsx'
+import SubscribeForm from './components/SubscribeForm/subscribeForm.jsx'
 
 function ExampleComponent() {
 return (
@@ -100,6 +106,14 @@ props.children */}
       <LoginForm></LoginForm>
   
       <ClockDisplay></ClockDisplay>
+   
+      <BitcoinRates></BitcoinRates>
+
+      <RefCounter></RefCounter>
+
+      <VideoPlayer></VideoPlayer>
+      <PostListReducer></PostListReducer>
+      <SubscribeForm></SubscribeForm>
     </div>
   );
 }
