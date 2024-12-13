@@ -25,6 +25,8 @@ import RefCounter  from './components/countREf/countRef.jsx'
 import VideoPlayer from './components/VideoPlayer/videoPlayer.jsx'
 import PostListReducer from './components/useReducer/postList.jsx'
 import SubscribeForm from './components/SubscribeForm/subscribeForm.jsx'
+import { UserProvider } from './context/UserContext.jsx'
+import MyThemeProvider from './context/ThemeContext.jsx'
 
 function ExampleComponent() {
 return (
@@ -69,6 +71,8 @@ avatarUrl: 'https://placekitten.com/g/64/64',
   
   return (
     <div>
+      <UserProvider>
+        <MyThemeProvider>
 
       {/* Renders the component with a single prop 'myProp' */}
       <PropsDisplayer myProp="first prop" />
@@ -113,8 +117,11 @@ props.children */}
 
       <VideoPlayer></VideoPlayer>
       <PostListReducer></PostListReducer>
-      <SubscribeForm></SubscribeForm>
+          <SubscribeForm></SubscribeForm>
+          </MyThemeProvider>
+     </UserProvider>
     </div>
+     
   );
 }
 
