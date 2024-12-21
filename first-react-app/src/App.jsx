@@ -29,17 +29,24 @@ import { UserProvider } from './context/UserContext.jsx'
 //import MyThemeProvider, { MyThemeContext } from './context/ThemeContext.jsx'
 import AppRoutes from './routes/AppRoutes.jsx'
 import NavBar from './components/NavBar/navbar.jsx'
+import CustomCard from './components/Card/card.jsx'
+import MUIDialog from './components/Dialogs/dialogs.jsx'
+import { ThemeProvider } from "@mui/material/styles";
+import { tealTheme } from './components/themes/tealTheme';
 
 
 
   function App() {
     return (
       <>
+        <ThemeProvider theme={tealTheme}>{/* App.jsx components */}
         <UserProvider>
     
      
           <NavBar></NavBar>
           <AppRoutes></AppRoutes>
+          <MUIDialog text="My first MUI Dialog"></MUIDialog>
+     
           
           {/*<PropsDisplayer></PropsDisplayer >
           <City name="Sydney" />
@@ -60,12 +67,15 @@ import NavBar from './components/NavBar/navbar.jsx'
            <FullName first="Kendrick" middle="'the GOAT'" last="Lamar"> </FullName>
           <PostListReducer></PostListReducer>
           <SubscribeForm></SubscribeForm>
+           <CustomCard title="Iguana">Green
+Lizard Card</CustomCard>
           <MoodChanger></MoodChanger>
           <MoviesList></MoviesList> */}
-      
     
     
-        </UserProvider>
+    
+          </UserProvider>
+             </ThemeProvider>
       </>
      
     )

@@ -16,7 +16,8 @@ return (
 <li><NavLink to="/dash">Dashboard</NavLink></li>
 <li><NavLink to="/about">About</NavLink></li>
 <li><NavLink to="/posts">Posts</NavLink></li>
- <li><NavLink to="/login">Login</NavLink></li>
+<li><NavLink to="/login">Login</NavLink></li>
+<li><NavLink to="/card">Cards</NavLink></li>
 </ul> {/* ++ Add another page with route and component */}
 </nav>
 )

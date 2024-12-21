@@ -10,6 +10,7 @@ import AboutPage from "../pages/AboutPage";
 import PostsPage, { Post, PostList } from "../pages/PostsPage";
 import ProtectedRoute from "./protectedRoute";
 import LoginForm from "../components/Form/form";
+import CustomCard from "../pages/CardsPage";
 
 
 
@@ -29,14 +30,18 @@ return (
 </Route>
 <Route path="login" element={<LoginForm />} />
 <Route path="/about" element={<AboutPage {...props} />} />
-
-{/* special route to handle if none of the above match */}
-      
+        <Route path="/card" element={<CustomCard title="Green Lizard Card" {...props}>
+            This is a description about the green lizard. It is contemplative and calm.</CustomCard>}
+        />
+            {/* special route to handle if none of the above match */}
 <Route path='/posts' element={<PostsPage {...props} />} >
+            
 <Route index element={<PostList />} />
 {/* dynamic param taken from route, stored in variable called id */}
-<Route path=":id" element={<Post />} />
+    <Route path=":id" element={<Post />} />
+          
 </Route><Route path="*" element={<PageNotFound />} />  
+
     </Routes>
     
     
